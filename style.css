@@ -241,6 +241,7 @@ header nav a:hover {
   padding: 20px;
   justify-content: center;
   margin-bottom: 50px;
+  height: auto;
 }
 .mohamed,
 .amr,
@@ -248,6 +249,7 @@ header nav a:hover {
 .retaj,
 .rewan {
   border-radius: 20px;
+  /* position: absolute; */
   box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.514);
   margin: 20px;
   text-align: center;
@@ -457,12 +459,12 @@ header nav a:hover {
 .product-info:hover {
   background-color: #c4c4c4;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .product-info .info {
   display: flex;
-  transition: ease 2s;
+  gap: 50px;
+  transition: ease 1s;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -495,7 +497,6 @@ header nav a:hover {
   transition: linear 0.5s;
   font-size: 20px;
   font-weight: 500;
-  margin-left: 20px;
 }
 
 .product-info:hover .product-price {
@@ -575,9 +576,6 @@ footer .line {
   .aca-p {
     font-size: 12px;
   }
-  .team-info {
-    height: 100vh;
-  }
   .products-section {
     padding-top: 25px;
   }
@@ -591,8 +589,10 @@ footer .line {
     font-size: 16px;
   }
 }
-
-@media (max-width: 1023px) {
+/* 
+mobile ==> 768
+*/
+@media (max-width: 768px) {
   nav {
     padding-left: 20px;
   }
@@ -620,6 +620,7 @@ footer .line {
   }
   .aca-p {
     font-size: 7px;
+    white-space: wrap;
   }
   .mohamed,
   .amr,
@@ -649,6 +650,9 @@ footer .line {
   }
   .product-info {
     width: 60vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .product-info footer h2 {
     font-size: 20px;
@@ -660,14 +664,34 @@ footer .line {
   .product-info .info {
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
   }
   .product-info:hover .info {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
+  .atc {
+    font-size: 15px;
+  }
+
   .about {
     height: 120%;
+  }
+  .product-info:hover .product-price {
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    background-color: red;
+  }
+  .product-info:hover .atc {
+    padding: 10px;
+    border-radius: 25px;
   }
 }
